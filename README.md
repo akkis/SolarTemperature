@@ -1,11 +1,11 @@
 # Solar Temperature
 
-An ESP32 solar water heater temperature monitor using LoRa. A battery-oriented sender reads a DS18B20 sensor and transmits the temperature to a receiver, which displays it on an OLED and forwards it to an MQTT broker over Wi-Fi.
+An ESP32 solar water heater temperature monitor using LoRa. A battery-oriented sender reads a DS18B20 sensor and transmits the temperature to another ESP32 - the receiver-, which displays it on an OLED and forwards it to an MQTT broker over Wi-Fi.
 
 ```text
 DS18B20 → ESP32 sender → LoRa (433 MHz) → ESP32 receiver → MQTT broker
                                                ↓
-                                         SH1106 OLED
+                                          SH1106 OLED
 ```
 
 ## Hardware
